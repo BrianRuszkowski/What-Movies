@@ -1,0 +1,165 @@
+/*============================================================Sections=====================================================================*/
+
+.whatmovies__coming-soon,
+.whatmovies__top-picks,
+.whatmovies__watched-now,
+.whatmovies__most-popular {
+    background-color: #24292F;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding: 20px 10px;
+    height: 70px;
+}
+
+.whatmovies__coming-soon {
+    bottom: -7rem;
+}
+
+.whatmovies__most-popular {
+    bottom: -32rem; 
+}
+
+.whatmovies__top-picks {
+    bottom: -58rem;
+}
+
+.whatmovies__watched-now {
+    bottom: -83rem;
+}
+
+
+ul {
+    position: absolute;
+    list-style: none;
+    font-size: 20px;
+}
+
+/*==========================================================Section Buttons=================================================================*/
+
+.whatmovies__coming-soon button,
+.whatmovies__top-picks button,
+.whatmovies__watched-now button,
+.whatmovies__most-popular button {
+    background-color: transparent; 
+    color: yellow; 
+    padding: 20px; 
+    border: none; 
+    border-radius: 50%; 
+    font-weight: bold; 
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+    box-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
+}
+  
+.whatmovies__coming-soon .Previous,
+.whatmovies__top-picks .Previous,
+.whatmovies__watched-now .Previous,
+.whatmovies__most-popular .Previous {
+    position: absolute;
+    transform: translate(0%, 350%);
+    margin-left: 0%; /* Remove margin-left for the first button */
+}
+
+.whatmovies__coming-soon .Next,
+.whatmovies__top-picks .Next,
+.whatmovies__watched-now .Next,
+.whatmovies__most-popular .Next {
+    transform: translate(0%, 350%);
+    margin-right: 0; /* Remove margin-right for the second button */
+    z-index: 10;
+}
+
+.whatmovies__coming-soon button:hover,
+.whatmovies__top-picks button:hover,
+.whatmovies__watched-now button:hover,
+.whatmovies__most-popular button:hover {
+    background-color: darkgoldenrod; /* Change to a different color on hover */
+}
+
+/*============================================================Image Sliders===================================================================*/
+
+/* Slider Starts Here */
+
+.image-slider {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    transform: translate(2.5%, 69%);
+}
+
+.image-slider p {
+    text-align: center;
+    will-change: transform;
+    -webkit-overflow-scrolling: touch; /* Add touch scrolling for smoother experience on iOS */
+}
+  
+.slider-wrapper {
+    display: flex;
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
+    font-size: 15px;
+    text-align: center;
+}
+  
+.slide {
+    flex: 0 0 9.4vw; 
+    box-sizing: border-box;
+    min-width: 230px;
+    max-width: 230px;
+}
+  
+.slide img {
+    width: 200px; 
+    height: 250px;
+    cursor: pointer;
+}
+
+.slide img:hover {
+    scale: 1.1;
+}
+  
+.active {
+    transform: translateX(0);
+}
+  
+.image-row {
+    display: flex;
+    margin-top: 10px;
+}
+  
+.image-row img {
+    width: 100px; 
+    height: auto; 
+    margin-right: 10px; 
+}
+
+/*============================================================Section Indicators===================================================================*/
+
+.section-indicators {
+    position: absolute;
+    right: 0%; 
+    bottom: 30px; 
+    transform: translateX(-10%);
+    display: flex;
+    justify-content: center;
+}
+
+.section-indicator {
+    width: 10px;
+    height: 10px;
+    background-color: #333;
+    border-radius: 50%;
+    margin: 0 4px;
+    cursor: pointer;
+}
+
+.section-indicator.active {
+    background-color: #ccc;
+}

@@ -1,0 +1,29 @@
+.whatmovies__test {
+  text-align: center;
+  padding: 20px;
+}
+
+.random-movies-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Adjust the number of columns as needed */
+  gap: 20px; /* Adjust the gap between images */
+}
+
+.random-movie {
+  text-align: center;
+  border: 1px solid #ddd; /* Add a border to each movie element */
+  padding: 10px;
+  max-width: 400px; /* Adjust the maximum width of each movie element */
+  margin-left: 40px;
+}
+
+.random-movie img {
+  max-width: 100%; /* Ensure all images have the same width */
+  height: 500px;
+}
+
+.random-movie p {
+  margin: 0;
+  padding: 5px;
+  font-size: 24px; /* Adjust the font size for movie details */
+}

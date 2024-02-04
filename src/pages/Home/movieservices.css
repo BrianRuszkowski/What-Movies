@@ -1,0 +1,9 @@
+/*=============================================================Movie Services Section==========================================================================*/
+
+.whatmovies__services-title {
+    font-size: 30px;
+    margin-top: 140rem;
+    text-align: center;
+    animation: infinite;
+    color: white;
+}

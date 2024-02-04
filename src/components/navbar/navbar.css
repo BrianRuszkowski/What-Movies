@@ -1,0 +1,177 @@
+/* navbar.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.whatmovies__navbar {
+    background-color: #24292F;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+
+    padding: 0rem 2rem;
+}
+
+.whatmovies__navbar-links {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.whatmoives__menu-container button {
+    color: #ff0000;
+}
+  
+.whatmovies__navbar-links_container a:hover {
+    color: #f0a500;
+}
+
+.whatmovies__logo {
+    margin-left: 1rem;
+}
+
+.whatmovies__logo img {
+    width: 150px;
+    height: auto;
+}
+
+.whatmovies__navbar-links_logo img {
+    width: 62.56px;
+    height: 16.02px;
+}
+
+.whatmovies__navbar-links_container {
+    display: flex;
+    flex-direction: row;
+}
+
+/*
+.whatmovies__navbar-sign {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+*/
+
+.whatmovies__navbar-links_container a,
+/* .whatmovies__navbar-sign a, */
+.whatmovies__navbar-menu_container-links a {
+    color: #fff;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    text-transform: capitalize;
+    text-decoration: none;
+
+    margin: 0 1rem;
+    cursor: pointer;
+}
+
+/* .whatmovies__navbar-sign button, */
+.whatmovies__navbar-menu_container button {
+    padding: 0.7rem 1.2rem;
+    color: #fff;
+    background: #204aa5;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 15px;
+    margin-right: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+
+.whatmovies__navbar-menu {
+    margin-left: 1rem;
+
+    display: none;
+    position: relative;
+}
+
+.whatmovies__navbar-menu svg {
+    cursor: pointer;
+}
+
+.whatmovies__navbar-menu_container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+    
+    text-align: end;
+    background: #24292F;
+    padding: 2rem;
+    position: absolute;
+    right: 0;
+    top: 40px;
+    margin-top: 1rem;
+    min-width: 210px;
+    border-radius: 5px;
+    box-shadow: #f0a500;
+}
+
+.whatmovies__navbar-menu_container p {
+    margin: 1rem 0;
+}
+
+/* Remove comment tag to add back in
+.whatmovies__navbar-menu_container-links-sign {
+    display: none;
+}
+*/
+
+@media screen and (max-width: 1050px) {
+    .whatmovies__navbar-links_container {
+        display: none;
+    }
+
+    .whatmovies__navbar-menu {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .whatmovies__navbar {
+        padding: 2rem 4rem;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .whatmovies__navbar {
+        padding: 1rem;
+        position: relative; /* Add this to establish a stacking context */
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        z-index: 1; /* Add this to make the navbar appear on top of the background image */
+    }
+
+    .whatmovies__navbar-sign {
+        display: none;
+    }
+
+    .whatmovies__navbar-menu_container {
+        top: 20px;
+        right: 0; /* Add this to align the menu to the right */
+        width: auto; /* Remove min-width to allow content to expand */
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    }
+
+    /* Remove comment to add backk in
+    .whatmovies__navbar-menu_container-links-sign {
+        display: block;
+    }
+    
+
+    .whatmovies__navbar-menu_container-links-sign button {
+        margin-bottom: 12px;
+    }
+    */
+}

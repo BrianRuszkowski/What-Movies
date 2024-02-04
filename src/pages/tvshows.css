@@ -1,0 +1,129 @@
+/*
+.image-slider {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.slider-wrapper {
+  display: flex;
+  width: 100%;
+  transition: transform 0.3s ease-in-out;
+  margin: 0 -20px; 
+}
+
+.slide {
+  flex: 0 0 25%; 
+  text-align: center;
+  width: 100%; 
+  height: auto;
+  overflow: hidden;
+  padding: 0 20px; 
+  box-sizing: border-box; 
+}
+
+.slide img {
+  width: 200px; 
+  height: 250px; 
+}
+
+.active {
+  transform: translateX(0);
+}
+
+.image-row {
+  display: flex;
+  margin-top: 10px;
+}
+
+.image-row img {
+  width: 100px; 
+  height: auto; 
+  margin-right: 10px; 
+}
+
+.prev-button,
+.next-button {
+  background-color: #333;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.prev-button {
+  left: 0;
+}
+
+.next-button {
+  right: 0;
+}
+
+.section-indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.section-indicator {
+  width: 10px;
+  height: 10px;
+  background-color: #333;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.section-indicator.active {
+  background-color: #ccc;
+}
+*/
+
+/* Style for the image slider */
+.image-slider {
+  position: relative;
+}
+
+/* Style for the slider wrapper */
+.slider-wrapper {
+  display: flex;
+}
+
+/* Style for each slide in the slider */
+.slide {
+  flex: 0 0 auto; /* Ensure each slide has a fixed size */
+  margin-right: 10px; /* Adjust as needed for spacing between slides */
+}
+
+/* Style for the movie modal */
+.movie-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #24292F;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  max-width: 100%;
+  max-height: 100%;
+  overflow: auto;
+  z-index: 1000; /* Ensure the modal appears above other elements */
+}
+
+/* Style for the close button */
+.movie-modal button {
+  cursor: pointer;
+  background: #007BFF;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+}

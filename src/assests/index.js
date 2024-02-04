@@ -1,0 +1,14 @@
+export { default as Hero } from './Hero.png';
+export { default as Space } from './space.png';
+export { default as IT} from './IT.jpg';
+export { default as Joker } from './Joker.jpg';
+export { default as M3gan } from './M3gan.jpg';
+export { default as GOT } from './Game of Thrones.jpg';
+export { default as Interstellar } from './Interstellar.jpg'; 
+export { default as Oppenheimer } from './Oppenheimer.jpg';
+export { default as BigBang } from './The Big Bang Theory.jpg'; 
+export { default as TheNun2 } from './The Nun II.jpg';
+export { default as AquaManLK } from './Aquaman and the Lost Kingdom.jpg';
+export { default as Shazam } from './Shazam Fury of the Gods.jpg';
+export { default as Mario } from './The Super Mario Bros. Movie.jpg';
+export { default as Background } from './Background.png';
