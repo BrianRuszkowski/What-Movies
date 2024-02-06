@@ -163,3 +163,44 @@ ul {
 .section-indicator.active {
     background-color: #ccc;
 }
+
+@media screen and (max-width: 1000px) {
+    .whatmovies__coming-soon,
+    .whatmovies__top-picks,
+    .whatmovies__watched-now,
+    .whatmovies__most-popular {
+        height: 70px;
+        position: relative; /* Change position to relative */
+        bottom: 0; /* Reset bottom to its default value */
+        transform: translate(0%, -600%); /* Reset transform */
+        margin-top: 330px; /* Adjust margin to control the spacing */
+    }
+
+    .whatmovies__coming-soon button,
+    .whatmovies__top-picks button,
+    .whatmovies__watched-now button,
+    .whatmovies__most-popular button  {
+        height: 55px;
+    }
+
+    .whatmovies__background-image-title:hover {
+        opacity: 1;
+        transition: opacity 0.3s ease;
+    }
+
+    .whatmovies__find-movies button {
+        padding: 20px;
+        margin: 30px auto;
+        border-radius: 100px 100px / 120px;
+        cursor: pointer;
+        font-family: 'cooper black';
+        box-sizing: border-box;
+        width: 80%;
+        max-width: 400px;
+    }
+
+    p {
+        font-size: 8vw; /* Responsive font size based on viewport width */
+        margin-top: 10px;
+    }
+}

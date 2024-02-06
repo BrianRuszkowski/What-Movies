@@ -189,3 +189,76 @@ p {
     position: fixed;
     width: 100%;
 }
+
+/*=============================================================Media Content==========================================================================*/
+
+@media screen and (max-width: 1440px) {
+    .movie-orbit {
+      display: none;
+    }
+
+    .whatmovies__coming-soon {
+        bottom: -210px; /* Adjust as needed */
+    }
+
+    .whatmovies__top-picks {
+        bottom: -620px; /* Adjust as needed */
+    }
+
+    .whatmovies__watched-now {
+        bottom: -1030px; /* Adjust as needed */
+    }
+
+    .whatmovies__most-popular {
+        bottom: -1440px; /* Adjust as needed */
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .movie {
+        display: none;
+    }
+
+    .movie-orbit {
+        display: none;
+      }
+
+    .whatmovies__background-image img {
+        width: 100%;
+        height: auto;
+        opacity: 30%;
+    }
+
+    .whatmovies__background-image-title {
+        width: 80%;
+        max-width: 750px;
+        height: auto;
+        backdrop-filter: blur(10px);
+        opacity: 0.85;
+        border-radius: 10px;
+        padding: 20px;
+        color: white;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        transform: translate(12.5%, -40%);
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .movie-orbit {
+        display: none;
+      }
+}
+
+@media screen and (max-width: 550px) {
+    .movie-orbit {
+      display: none;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    .movie-orbit {
+      display: none;
+    }
+}

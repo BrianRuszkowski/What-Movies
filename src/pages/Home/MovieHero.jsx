@@ -45,9 +45,7 @@ const Hero = () => {
 
     <div className={`movie-orbit ${isMovieOrbitHidden ? 'hidden' : ''}`}>
       <div className="movie">
-        <a href="https://example.com/it-movie">
           <img src={IT} alt="IT" />
-        </a>
       </div>
       <div className="movie">
         <img src={Interstellar} alt="Interstellar" />
