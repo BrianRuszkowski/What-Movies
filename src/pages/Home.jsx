@@ -3,9 +3,9 @@
 import React from 'react';
 import { MovieHero, MovieSlider, MovieServices, MovieLinks, MovieFooter } from './Home/index';
 import './home.css';
-import './Home/movieservices.css';
 import './Home/moviehero.css';
 import './Home/movieslider.css';
+import './Home/movieservices.css';
 
 const Home = ({ images }) => {
   return (
