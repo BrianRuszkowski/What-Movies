@@ -23,6 +23,10 @@
 }
 
 @media screen and (max-width: 1000px) {
+    .movie-orbit {
+        display: none;
+      }
+
     .whatmovies__background-image img {
         width: 100%;
         height: auto;
@@ -85,7 +89,9 @@
 
 
 @media screen and (max-width: 900px) {
-    
+    .movie-orbit {
+        display: none;
+      }
 }
 
 @media screen and (max-width: 550px) {
