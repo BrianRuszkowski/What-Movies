@@ -1,5 +1,5 @@
 import React from 'react';
-import './movieservices.css';
+import '../MovieServices/movieservices.css';
 
 const MovieServices = () => {
   return (

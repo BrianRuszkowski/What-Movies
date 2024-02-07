@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { fetchUpcomingMovies } from './Home/MovieAPI';
+import { fetchUpcomingMovies } from './Home/MovieAPI/MovieAPI';
 import './tvshows.css';
 
 const SectionIndicators = ({ totalSections, currentSection, onIndicatorClick }) => {

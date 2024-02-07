@@ -1,7 +1,8 @@
 // Hero.jsx
 
 import React, { useState } from 'react';
-import { Background, IT, Interstellar, Joker, M3gan, Oppenheimer, BigBang, TheNun2, AquaManLK, Shazam, Mario } from '../../assests/index';
+import { Background, IT, Interstellar, Joker, M3gan, Oppenheimer, BigBang, TheNun2, AquaManLK, Shazam, Mario } from '../../../assests/index';
+import '../MovieHero/moviehero.css';
 
 const Hero = () => {
   const [showOverlay, setShowOverlay] = useState(false);
