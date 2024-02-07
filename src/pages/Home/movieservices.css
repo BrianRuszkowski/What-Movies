@@ -2,7 +2,8 @@
 
 .whatmovies__services-title {
     font-size: 30px;
-    margin-top: 140rem;
+    position: relative;
+    margin-top: 20rem;
     text-align: center;
     animation: infinite;
     color: white;

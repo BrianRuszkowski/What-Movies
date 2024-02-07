@@ -23,9 +23,6 @@ const Hero = () => {
 
   return (
     <div className='whatmovies__hero'>
-      <div className='whatmovies__background-image'>
-        <img src={Background} alt="Background" />
-      </div>
       <div className='whatmovies__background-image-title'>
         <div className='whatmovies__find-movies'>
           <p>Ready to break free from the movie monotony? Discover fantastic films you've yet to experience, handpicked just for you</p>
@@ -74,7 +71,10 @@ const Hero = () => {
       <div className="movie">
         <img src={Mario} alt="Mario" />
       </div>
-      {/* Add more movie elements */}
+    </div>
+
+    <div className='whatmovies__background-image'>
+      <img src={Background} alt="Background" />
     </div>
   </div>
 )};

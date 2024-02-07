@@ -222,150 +222,149 @@ const Movieslider = () => {
   };
 
   return (
-    <div>
-    <div className='whatmovies__coming-soon'>
-      <ul>Latest Movies</ul>
+    <div className='whatmovies__slider'>
+      <div className='whatmovies__latest'>
+        <ul>Latest Movies</ul>
 
-      <div className="image-slider">
-        <div className="slider-wrapper">
-          {upcoming.map((movie, index) => (
-            <div key={index} className="slide" onClick={() => handleMovieClick(movie)}>
-              <img
-                src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-                alt={movie.title}
-                width="400"
-                onDragStart={handleImageDragStart}
-                style={{ userSelect: 'none' }} // Add this style to disable selection
-              />
-            <h4>{movie.title}</h4>
-            <h5>Release Date: {movie.release_date}</h5>
+        <div className="image-slider">
+          <div className="slider-wrapper">
+            {upcoming.map((movie, index) => (
+              <div key={index} className="slide" onClick={() => handleMovieClick(movie)}>
+                <img
+                  src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                  alt={movie.title}
+                  width="400"
+                  onDragStart={handleImageDragStart}
+                  style={{ userSelect: 'none' }} // Add this style to disable selection
+                />
+              <h4>{movie.title}</h4>
+              <h5>Release Date: {movie.release_date}</h5>
+            </div>
+            ))}
           </div>
-          ))}
         </div>
+
+        <SectionIndicators
+          totalSections={totalUpcomingSections}
+          currentSection={currentUpcomingSection}
+          onIndicatorClick={handleIndicatorClick}
+        />
+
+        <button className='Previous' onClick={prevUpcomingSection}>&#9664;</button>
+        <button className='Next' onClick={nextUpcomingSection}>&#9654;</button>
+
+        {selectedMovie && (
+          <MovieModal movie={selectedMovie} onClose={() => setSelectedMovie(null)} />
+        )}
+      </div>
+    
+    
+      <div className='whatmovies__most-popular'>
+        <ul>Popular Movies</ul>
+
+        <div className="image-slider">
+          <div className="slider-wrapper">
+            {latest.map((movie, index) => (
+              <div key={index} className="slide" onClick={() => handleMovieClick(movie)}>
+                <img
+                  src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                  alt={movie.title}
+                  width="400"
+                  onDragStart={handleImageDragStart}
+                  style={{ userSelect: 'none' }} // Add this style to disable selection
+                />
+              <h4>{movie.title}</h4>
+              <h5>Release Date: {movie.release_date}</h5>
+            </div>
+            ))}
+          </div>
+        </div>
+
+        <SectionIndicators
+          totalSections={totalLatestSections}
+          currentSection={currentLatestSection}
+          onIndicatorClick={handleIndicatorClick}
+        />
+
+        <button className='Previous' onClick={prevLatestSection}>&#9664;</button>
+        <button className='Next' onClick={nextLatestSection}>&#9654;</button>
+
+        {selectedMovie && (
+          <MovieModal movie={selectedMovie} onClose={() => setSelectedMovie(null)} />
+        )}
       </div>
 
-      <SectionIndicators
-        totalSections={totalUpcomingSections}
-        currentSection={currentUpcomingSection}
-        onIndicatorClick={handleIndicatorClick}
-      />
+      <div className='whatmovies__being-watched'>
+        <ul>Being Watched Movies</ul>
 
-      <button className='Previous' onClick={prevUpcomingSection}>&#9664;</button>
-      <button className='Next' onClick={nextUpcomingSection}>&#9654;</button>
-
-      {selectedMovie && (
-        <MovieModal movie={selectedMovie} onClose={() => setSelectedMovie(null)} />
-      )}
-    </div>
-
-    <div className='whatmovies__most-popular'>
-      <ul>Popular Movies</ul>
-
-      <div className="image-slider">
-        <div className="slider-wrapper">
-          {latest.map((movie, index) => (
-            <div key={index} className="slide" onClick={() => handleMovieClick(movie)}>
-              <img
-                src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-                alt={movie.title}
-                width="400"
-                onDragStart={handleImageDragStart}
-                style={{ userSelect: 'none' }} // Add this style to disable selection
-              />
-            <h4>{movie.title}</h4>
-            <h5>Release Date: {movie.release_date}</h5>
+        <div className="image-slider">
+          <div className="slider-wrapper">
+            {popular.map((movie, index) => (
+              <div key={index} className="slide" onClick={() => handleMovieClick(movie)}>
+                <img
+                  src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                  alt={movie.title}
+                  width="400"
+                  onDragStart={handleImageDragStart}
+                  style={{ userSelect: 'none' }} // Add this style to disable selection
+                />
+              <h4>{movie.title}</h4>
+              <h5>Release Date: {movie.release_date}</h5>
+            </div>
+            ))}
           </div>
-          ))}
         </div>
+
+        <SectionIndicators
+          totalSections={totalPopularSections}
+          currentSection={currentPopularSection}
+          onIndicatorClick={handleIndicatorClick}
+        />
+
+        <button className='Previous' onClick={prevPopularSection}>&#9664;</button>
+        <button className='Next' onClick={nextPopularSection}>&#9654;</button>
+
+        {selectedMovie && (
+          <MovieModal movie={selectedMovie} onClose={() => setSelectedMovie(null)} />
+        )}
       </div>
-
-      <SectionIndicators
-        totalSections={totalLatestSections}
-        currentSection={currentLatestSection}
-        onIndicatorClick={handleIndicatorClick}
-      />
-
-      <button className='Previous' onClick={prevLatestSection}>&#9664;</button>
-      <button className='Next' onClick={nextLatestSection}>&#9654;</button>
-
-      {selectedMovie && (
-        <MovieModal movie={selectedMovie} onClose={() => setSelectedMovie(null)} />
-      )}
-    </div>
-
-    <div className='whatmovies__top-picks'>
-      <ul>Being Watched Movies</ul>
-
-      <div className="image-slider">
-        <div className="slider-wrapper">
-          {popular.map((movie, index) => (
-            <div key={index} className="slide" onClick={() => handleMovieClick(movie)}>
-              <img
-                src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-                alt={movie.title}
-                width="400"
-                onDragStart={handleImageDragStart}
-                style={{ userSelect: 'none' }} // Add this style to disable selection
-              />
-            <h4>{movie.title}</h4>
-            <h5>Release Date: {movie.release_date}</h5>
-          </div>
-          ))}
-        </div>
-      </div>
-
-      <SectionIndicators
-        totalSections={totalPopularSections}
-        currentSection={currentPopularSection}
-        onIndicatorClick={handleIndicatorClick}
-      />
-
-      <button className='Previous' onClick={prevPopularSection}>&#9664;</button>
-      <button className='Next' onClick={nextPopularSection}>&#9654;</button>
-
-      {selectedMovie && (
-        <MovieModal movie={selectedMovie} onClose={() => setSelectedMovie(null)} />
-      )}
-    </div>
 
     
-    <div className='whatmovies__watched-now'>
-      <ul>Top Rated Movies</ul>
+      <div className='whatmovies__top-rated'>
+        <ul>Top Rated Movies</ul>
 
-      <div className="image-slider">
-        <div className="slider-wrapper">
-          {beingwatched.map((movie, index) => (
-            <div key={index} className="slide" onClick={() => handleMovieClick(movie)}>
-              <img
-                src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-                alt={movie.title}
-                width="400"
-                onDragStart={handleImageDragStart}
-                style={{ userSelect: 'none' }} // Add this style to disable selection
-              />
-            <h4>{movie.title}</h4>
-            <h5>Release Date: {movie.release_date}</h5>
+        <div className="image-slider">
+          <div className="slider-wrapper">
+            {beingwatched.map((movie, index) => (
+              <div key={index} className="slide" onClick={() => handleMovieClick(movie)}>
+                <img
+                  src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                  alt={movie.title}
+                  width="400"
+                  onDragStart={handleImageDragStart}
+                  style={{ userSelect: 'none' }} // Add this style to disable selection
+                />
+              <h4>{movie.title}</h4>
+              <h5>Release Date: {movie.release_date}</h5>
+            </div>
+            ))}
           </div>
-          ))}
         </div>
+
+        <SectionIndicators
+          totalSections={totalBeingWatchedSection}
+          currentSection={currentBeingWatchedSection}
+          onIndicatorClick={handleIndicatorClick}
+        />
+
+        <button className='Previous' onClick={prevBeingWatchedSection}>&#9664;</button>
+        <button className='Next' onClick={nextBeingWatchedSection}>&#9654;</button>
+
+        {selectedMovie && (
+          <MovieModal movie={selectedMovie} onClose={() => setSelectedMovie(null)} />
+        )}
       </div>
-
-      <SectionIndicators
-        totalSections={totalBeingWatchedSection}
-        currentSection={currentBeingWatchedSection}
-        onIndicatorClick={handleIndicatorClick}
-      />
-
-      <button className='Previous' onClick={prevBeingWatchedSection}>&#9664;</button>
-      <button className='Next' onClick={nextBeingWatchedSection}>&#9654;</button>
-
-      {selectedMovie && (
-        <MovieModal movie={selectedMovie} onClose={() => setSelectedMovie(null)} />
-      )}
     </div>
-  </div>
 )};
  
-
-
 export default Movieslider;

@@ -1,9 +1,9 @@
 /*============================================================Sections=====================================================================*/
 
-.whatmovies__coming-soon,
-.whatmovies__top-picks,
-.whatmovies__watched-now,
-.whatmovies__most-popular {
+.whatmovies__latest,
+.whatmovies__most-popular,
+.whatmovies__being-watched,
+.whatmovies__top-rated {
     background-color: #24292F;
     color: white;
     display: flex;
@@ -16,22 +16,25 @@
     height: 70px;
 }
 
-.whatmovies__coming-soon {
-    bottom: -7rem;
+.whatmovies__latest {
+    position: relative;
+    margin-top: 0rem;
 }
 
 .whatmovies__most-popular {
-    bottom: -32rem; 
+    position: relative;
+    margin-top: 20rem;
 }
 
-.whatmovies__top-picks {
-    bottom: -58rem;
+.whatmovies__being-watched {
+    position: relative;
+    margin-top: 20rem;
 }
 
-.whatmovies__watched-now {
-    bottom: -83rem;
+.whatmovies__top-rated {
+    position: relative;
+    margin-top: 20rem;
 }
-
 
 ul {
     position: absolute;
@@ -41,10 +44,10 @@ ul {
 
 /*==========================================================Section Buttons=================================================================*/
 
-.whatmovies__coming-soon button,
-.whatmovies__top-picks button,
-.whatmovies__watched-now button,
-.whatmovies__most-popular button {
+.whatmovies__latest button,
+.whatmovies__most-popular button,
+.whatmovies__being-watched button,
+.whatmovies__top-rated button {
     background-color: transparent; 
     color: yellow; 
     padding: 20px; 
@@ -56,28 +59,28 @@ ul {
     box-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
 }
   
-.whatmovies__coming-soon .Previous,
-.whatmovies__top-picks .Previous,
-.whatmovies__watched-now .Previous,
-.whatmovies__most-popular .Previous {
+.whatmovies__latest .Previous,
+.whatmovies__most-popular .Previous,
+.whatmovies__being-watched .Previous,
+.whatmovies__top-rated .Previous {
     position: absolute;
     transform: translate(0%, 350%);
     margin-left: 0%; /* Remove margin-left for the first button */
 }
 
-.whatmovies__coming-soon .Next,
-.whatmovies__top-picks .Next,
-.whatmovies__watched-now .Next,
-.whatmovies__most-popular .Next {
+.whatmovies__latest .Next,
+.whatmovies__most-popular .Next,
+.whatmovies__being-watched .Next,
+.whatmovies__top-rated .Next {
     transform: translate(0%, 350%);
     margin-right: 0; /* Remove margin-right for the second button */
     z-index: 10;
 }
 
-.whatmovies__coming-soon button:hover,
-.whatmovies__top-picks button:hover,
-.whatmovies__watched-now button:hover,
-.whatmovies__most-popular button:hover {
+.whatmovies__latest button:hover,
+.whatmovies__most-popular button:hover,
+.whatmovies__being-watched button:hover,
+.whatmovies__top-rated button:hover {
     background-color: darkgoldenrod; /* Change to a different color on hover */
 }
 
@@ -165,10 +168,10 @@ ul {
 }
 
 @media screen and (max-width: 1000px) {
-    .whatmovies__coming-soon,
-    .whatmovies__top-picks,
-    .whatmovies__watched-now,
-    .whatmovies__most-popular {
+    .whatmovies__latest,
+    .whatmovies__most-popular,
+    .whatmovies__being-watched,
+    .whatmovies__top-rated {
         height: 70px;
         position: relative; /* Change position to relative */
         bottom: 0; /* Reset bottom to its default value */
@@ -176,10 +179,10 @@ ul {
         margin-top: 330px; /* Adjust margin to control the spacing */
     }
 
-    .whatmovies__coming-soon button,
-    .whatmovies__top-picks button,
-    .whatmovies__watched-now button,
-    .whatmovies__most-popular button  {
+    .whatmovies__latest button,
+    .whatmovies__most-popular button,
+    .whatmovies__being-watched button,
+    .whatmovies__top-rated button  {
         height: 55px;
     }
 
