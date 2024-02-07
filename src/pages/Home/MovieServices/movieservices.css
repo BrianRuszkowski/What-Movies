@@ -1,9 +1,20 @@
 /*=============================================================Movie Services Section==========================================================================*/
 
+.whatmovies__services-line {
+    height: 4px; 
+    background-color: #232E33; 
+    width: 80%; 
+    margin: 20px auto; 
+    margin-top: 24rem;
+    border-radius: 2px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    position: relative; 
+}
+
 .whatmovies__services-title {
     font-size: 30px;
     position: relative;
-    margin-top: 20rem;
+    margin-top: 0rem;
     text-align: center;
     animation: infinite;
     color: white;

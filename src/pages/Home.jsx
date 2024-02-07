@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { MovieHero, MovieSlider, MovieServices, MovieLinks, MovieFooter } from './Home/index';
+import './home.css';
 
 const Home = ({ images }) => {
   return (

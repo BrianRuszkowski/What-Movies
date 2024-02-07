@@ -2,7 +2,8 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import { fetchUpcomingMovies, fetchPopularMovies, fetchBeingWatchedMovies, fetchLatestMovies } from '../MovieAPI/MovieAPI';
-import '../MovieSlider/movieslider.css';
+import './movieslider.css';
+
 const Movieslider = () => {
   const [upcomingMovies, setUpcomingMovies] = useState([]);
   const [latestMovies, setLatestMovies] = useState([]);

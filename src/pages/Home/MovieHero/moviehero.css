@@ -1,28 +1,3 @@
-body {
-    overflow-x: hidden;
-    background-color: #181818;
-  --sb-track-color: #232E33;
-  --sb-thumb-color: #26abd8;
-  --sb-size: 8px;
-
-  scrollbar-color: var(--sb-thumb-color) 
-                   var(--sb-track-color);
-}
-
-body::-webkit-scrollbar {
-  width: var(--sb-size);
-}
-
-body::-webkit-scrollbar-track {
-  background: var(--sb-track-color);
-  border-radius: 10px;
-}
-
-body::-webkit-scrollbar-thumb {
-  background: var(--sb-thumb-color);
-  border-radius: 10px;
-}
-
 .whatmovies__background-image {
     margin-top: 25rem;
 }
