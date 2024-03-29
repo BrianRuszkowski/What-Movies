@@ -171,28 +171,6 @@ p {
 
 /*=============================================================Media Content==========================================================================*/
 
-@media screen and (max-width: 1440px) {
-    .movie-orbit {
-      display: none;
-    }
-
-    .whatmovies__coming-soon {
-        bottom: -210px; /* Adjust as needed */
-    }
-
-    .whatmovies__top-picks {
-        bottom: -620px; /* Adjust as needed */
-    }
-
-    .whatmovies__watched-now {
-        bottom: -1030px; /* Adjust as needed */
-    }
-
-    .whatmovies__most-popular {
-        bottom: -1440px; /* Adjust as needed */
-    }
-}
-
 @media screen and (max-width: 1000px) {
     .movie {
         display: none;

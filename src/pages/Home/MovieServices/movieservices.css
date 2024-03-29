@@ -13,9 +13,40 @@
 
 .whatmovies__services-title {
     font-size: 30px;
+    font-family: 'cooper black';
     position: relative;
     margin-top: 0rem;
     text-align: center;
     animation: infinite;
     color: white;
+}
+
+.whatmovies__services-card1,
+.whatmovies__services-card2,
+.whatmovies__services-card3 {
+    display: inline-block; /* Changed from 'table' and 'float: left' to 'inline-block' for better spacing control */
+    margin-top: 5rem;
+    margin-left: 13vw; /* This adds space between the cards */
+    width: 400px; 
+    height: 600px; 
+    backdrop-filter: blur(600px);
+    opacity: 0.85;
+    border-radius: 10px;
+    padding: 20px; /* Consolidated padding (removed the duplicate) */
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.whatmovies__services-card1:hover,
+.whatmovies__services-card2:hover,
+.whatmovies__services-card3:hover {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+@media screen and (max-width: 1440px) {
+    .whatmovies__services-title {
+        margin-top: 20rem;
+    }
 }
