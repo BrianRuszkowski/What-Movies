@@ -1,8 +1,9 @@
 // Home.jsx renders all the elements 
 
 import React from 'react';
-import { MovieHero, MovieSlider, MovieServices, MovieLinks, MovieFooter } from './Home/index';
+import { MovieHero, MovieSlider, MovieServices, MovieDiscover, MovieLinks, MovieFooter } from './Home/index';
 import './home.css';
+
 
 const Home = ({ images }) => {
   return (
@@ -10,6 +11,7 @@ const Home = ({ images }) => {
       <MovieHero />
       <MovieSlider />
       <MovieServices />
+      <MovieDiscover />
       {/* The commented code below is left commented until coded placed as placeholder */}
 
       {/*

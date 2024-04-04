@@ -1,8 +1,21 @@
-import React from 'react'
+import React from 'react';
+import './moviediscover.css';
 
-function MovieDiscover() {
+const MovieDiscover = () => {
   return (
-    <div>MovieDiscover</div>
+    <div className='Movie__Discover'>
+        <div className='Movie__Discover-title'>
+            <h1>Discover more now</h1>
+        </div>
+
+        <div className='Movie__Discover-movies'>
+
+        </div>
+
+        <div className='Movie__Discover-tvshows'>
+
+        </div>
+    </div>
   )
 }
 

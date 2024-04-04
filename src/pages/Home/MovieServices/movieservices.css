@@ -26,7 +26,7 @@
 .whatmovies__services-card3 {
     display: inline-block; /* Changed from 'table' and 'float: left' to 'inline-block' for better spacing control */
     vertical-align: top;
-    margin-top: 5rem;
+    margin-top: 20rem;
     margin-left: 13vw; /* This adds space between the cards */
     width: 400px; 
     height: 600px; 
@@ -46,7 +46,10 @@
 }
 
 .whatmovies__services-cards p {
+    font-family: 'cooper black';
+    font-weight: bold;
     font-size: 20px;
+    color: peru;
     margin-top: 30px;
 }
 

@@ -1,0 +1,9 @@
+.Movie__Discover-title {
+    font-size: 30px;
+    font-family: 'cooper black';
+    position: relative;
+    margin-top: 20rem;
+    text-align: center;
+    animation: infinite;
+    color: white;
+}
