@@ -1,0 +1,43 @@
+.Whatmovies__footer {
+    margin-top: 20rem;
+    width: 100%; 
+    height: 215px; 
+    backdrop-filter: blur(600px);
+    opacity: 0.85;
+    padding: 20px; 
+    color: #fff;
+    text-align: center;
+    background-color: #24292F;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.Whatmovies__footer-images img {
+    margin: 0 0.5rem;
+    width: 24px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.Whatmovies__footer-desc {
+    margin-bottom: 1rem;
+    color: #a9a9a9;
+}
+
+.Whatmovies__footer-copyright {
+    color: #a9a9a9;
+    margin-top: 10px;
+}
+
+.Whatmoives__footer-api img {
+    width: 75px;
+    height: 75px;
+    margin-bottom: 1rem;
+}
+
+.Whatmoives__footer-api p {
+    font-size: 0.65rem;
+    color: #a9a9a9;
+    margin-top: -2rem;
+}
+
+  

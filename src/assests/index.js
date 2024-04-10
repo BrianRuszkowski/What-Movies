@@ -12,3 +12,8 @@ export { default as AquaManLK } from './Aquaman and the Lost Kingdom.jpg';
 export { default as Shazam } from './Shazam Fury of the Gods.jpg';
 export { default as Mario } from './The Super Mario Bros. Movie.jpg';
 export { default as Background } from './Background.png';
+export { default as Facebook } from './Facebook.png';
+export { default as Instagram} from './Instagram.png';
+export { default as Linkedin } from './Linkedin.png';
+export { default as Github } from './Github.png';
+export { default as TMDB } from './TMDB.svg';

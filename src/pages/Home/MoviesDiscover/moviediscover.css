@@ -7,3 +7,39 @@
     animation: infinite;
     color: white;
 }
+
+.Movie__Discover-movies {
+    margin-top: 20rem;
+    width: 1400px; 
+    height: 600px; 
+    backdrop-filter: blur(600px);
+    opacity: 0.85;
+    border-radius: 10px;
+    padding: 20px; 
+    color: #fff;
+    text-align: center;
+    background-color: darkcyan;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.Movie__Discover-tvshows {
+    margin-top: 5rem;
+    width: 1400px; 
+    height: 600px; 
+    backdrop-filter: blur(600px);
+    opacity: 0.85;
+    border-radius: 10px;
+    padding: 20px; 
+    color: #fff;
+    text-align: center;
+    background-color: darkcyan;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    margin-left: auto; 
+    margin-right: 0; 
+}
+
+.Movie__Discover-movies:hover,
+.Movie__Discover-tvshows:hover {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}

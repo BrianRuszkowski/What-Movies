@@ -2,7 +2,15 @@ import React from 'react'
 
 export const MovieLinks = () => {
   return (
-    <div>MovieLinks</div>
+    <div className='MovieLinks'>
+      <div className='MovieLinks-premium'>
+
+      </div>
+
+      <div className='MovieLinks-non-premium'>
+        
+      </div>
+    </div>
   )
 }
 

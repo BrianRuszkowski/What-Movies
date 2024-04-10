@@ -12,12 +12,12 @@ const Home = ({ images }) => {
       <MovieSlider />
       <MovieServices />
       <MovieDiscover />
+      <MovieFooter />
       {/* The commented code below is left commented until coded placed as placeholder */}
 
       {/*
 
       <MovieLinks />
-      <MovieFooter />
 
       */}
       
