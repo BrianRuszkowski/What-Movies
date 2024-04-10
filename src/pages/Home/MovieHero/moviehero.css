@@ -58,13 +58,13 @@
   
 .overlay-content {
     background-color: #24292F;
-    padding: 450px 750px 50px 750px;
+    padding: 50px 750px 50px 750px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 12px;
 }
 
 .overlay-content h3 {
-    margin-top: -425px;
+    margin-top: -5px;
     font-family: 'cooper black';
 }
 
