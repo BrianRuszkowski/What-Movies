@@ -65,7 +65,7 @@ ul {
 .whatmovies__top-rated .Previous {
     position: absolute;
     transform: translate(0%, 350%);
-    margin-left: 0%; /* Remove margin-left for the first button */
+    margin-left: 0%; 
 }
 
 .whatmovies__latest .Next,
@@ -73,7 +73,7 @@ ul {
 .whatmovies__being-watched .Next,
 .whatmovies__top-rated .Next {
     transform: translate(0%, 350%);
-    margin-right: 0; /* Remove margin-right for the second button */
+    margin-right: 0; 
     z-index: 10;
 }
 
@@ -81,7 +81,7 @@ ul {
 .whatmovies__most-popular button:hover,
 .whatmovies__being-watched button:hover,
 .whatmovies__top-rated button:hover {
-    background-color: darkgoldenrod; /* Change to a different color on hover */
+    background-color: darkgoldenrod; 
 }
 
 /*============================================================Image Sliders===================================================================*/
@@ -143,6 +143,46 @@ ul {
     margin-right: 10px; 
 }
 
+.image-slider {
+    position: relative;
+}
+  
+.slider-wrapper {
+    display: flex;
+}
+  
+  
+.slide {
+    flex: 0 0 auto; 
+    margin-right: 10px; 
+}
+  
+
+.movie-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #24292F;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    max-width: 100%;
+    max-height: 100%;
+    overflow: auto;
+    z-index: 1000; 
+}
+  
+.movie-modal button {
+    cursor: pointer;
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
 /*============================================================Section Indicators===================================================================*/
 
 .section-indicators {
@@ -197,10 +237,10 @@ ul {
     .whatmovies__being-watched,
     .whatmovies__top-rated {
         height: 70px;
-        position: relative; /* Change position to relative */
-        bottom: 0; /* Reset bottom to its default value */
-        transform: translate(0%, -600%); /* Reset transform */
-        margin-top: 330px; /* Adjust margin to control the spacing */
+        position: relative; 
+        bottom: 0; 
+        transform: translate(0%, -600%); 
+        margin-top: 330px; 
     }
 
     .whatmovies__latest button,

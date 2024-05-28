@@ -6,14 +6,16 @@ import { fetchLatestMovies } from '../MovieAPI/MovieAPI';
 import './moviehero.css';
 
 const questions = [
-  {
-    text: "What genre of movies do you prefer?",
-    options: ["Action", "Comedy", "Drama"]
-  },
-  {
-    text: "Do you like movies from a specific decade?",
-    options: ["2020s", "2010s", "2000s", "1990s"]
-  }
+  { text: "What genre of movies do you prefer?", options: ["Action", "Comedy", "Drama"] },
+  { text: "What kind of mood are you in?", options: ["Happy", "Sad", "Tired", "Unmotivated"] },
+  { text: "Do you like movies from a specific decade?", options: ["2020s", "2010s", "2000s", "1990s"] },
+  { text: "Do you prefer movies with awards?", options: ["Yes, award winners only", "No preference"] },
+  { text: "What's your favorite movie setting?", options: ["Space", "Urban Cities", "Historical", "Fantasy Worlds"] },
+  { text: "How long do you prefer your movies to be?", options: ["Short (< 90 mins)", "Standard (90-120 mins)", "Long (> 120 mins)"] },
+  { text: "Do you enjoy franchises or standalone movies?", options: ["Franchises", "Standalone"] },
+  { text: "Choose a theme that interests you:", options: ["Adventure", "Science Fiction", "Romance", "Thriller"] },
+  { text: "Do you prefer films with lots of dialogue or action?", options: ["Dialogue-heavy", "Action-packed"] },
+  { text: "What type of protagonists do you enjoy watching?", options: ["Heroes", "Anti-Heroes", "Villains as Protagonists"] }
 ];
 
 const Hero = () => {
@@ -25,7 +27,7 @@ const Hero = () => {
     const fetchMovies = async () => {
       try {
         const response = await fetchLatestMovies();
-        setLatestMovies(response.data.results);  // Assume response.data.results is correct
+        setLatestMovies(response.data.results);  
       } catch (error) {
         console.error('Failed to fetch latest movies:', error);
       }
@@ -68,37 +70,35 @@ const Hero = () => {
           <button onClick={handleOverlayOpen}>Find Now</button>
         </div>
 
-        {showOverlay && (
-          <div className="overlay">
-            <div className="overlay-content">
-              {currentQuestionIndex < questions.length ? (
-                <>
-                  <h3>{questions[currentQuestionIndex].text}</h3>
-                  {questions[currentQuestionIndex].options.map((option, index) => (
-                    <button key={index} onClick={() => handleQuestionResponse(option)}>
-                      {option}
-                    </button>
-                  ))}
-                </>
-              ) : (
-                latestMovies.map((movie, index) => (
-                  <div key={index} className="slide">
+      {showOverlay && (
+        <div className="overlay">
+          <div className="overlay-content">
+            {currentQuestionIndex < questions.length ? (
+              <>
+                <h3>{questions[currentQuestionIndex].text}</h3>
+                {questions[currentQuestionIndex].options.map((option, index) => (
+                  <button key={index} onClick={() => handleQuestionResponse(option)}>{option}</button>
+                ))}
+              </>
+            ) : (
+              <div className="movies-container">
+                {latestMovies.map((movie, index) => (
+                  <div key={index} className="overlaymovie">
                     <img
                       src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
                       alt={movie.title}
-                      width="400"
                       onDragStart={(e) => e.preventDefault()}
-                      style={{ userSelect: 'none' }}
                     />
                     <h4>{movie.title}</h4>
                     <h5>Release Date: {movie.release_date}</h5>
                   </div>
-                ))
-              )}
-              <button onClick={handleOverlayClose}>Close</button>
-            </div>
+                ))}
+              </div>
+            )}
+            <button onClick={handleOverlayClose}>Close</button>
           </div>
-        )}
+        </div>
+      )}
       </div>
     </div>
   );

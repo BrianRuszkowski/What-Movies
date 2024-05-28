@@ -2,8 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './moviediscover.css';
 
-
-
 const MovieDiscover = () => {
   return (
     <div className='Movie__Discover'>

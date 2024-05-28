@@ -47,7 +47,22 @@
     width: 900px;
 }
 
+
 /*============================================================Overlay========================================================================*/
+
+.overlay-content::-webkit-scrollbar {
+    width: var(--overlay-sb-size);
+}
+
+.overlay-content::-webkit-scrollbar-track {
+    background: var(--overlay-sb-track-color);
+    border-radius: 3px; 
+}
+
+.overlay-content::-webkit-scrollbar-thumb {
+    background: var(--overlay-sb-thumb-color);
+    border-radius: 3px; 
+}
 
 .overlay {
     top: -7rem;
@@ -55,12 +70,27 @@
     position: fixed;
     background-color: rgba(0, 0, 0, 0.7);
 }
-  
+
 .overlay-content {
     background-color: #24292F;
-    padding: 50px 750px 50px 750px;
+    padding: 50px; 
     border: 1px solid #ccc;
     border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    overflow-y: auto; 
+    height: 80vh; 
+    width: 90vw; 
+    margin: auto;
+    
+    --overlay-sb-track-color: #232E33;
+    --overlay-sb-thumb-color: #26abd8;
+    --overlay-sb-size: 8px;
+
+    overflow-y: auto;  
+    scrollbar-width: thin; 
+    scrollbar-color: var(--overlay-sb-thumb-color) var(--overlay-sb-track-color); 
 }
 
 .overlay-content h3 {
@@ -70,14 +100,49 @@
 
 .overlay-content button {
     padding: 20px;
-    margin-left: 0px ;
-    margin-top: 900px;
-    border-radius: 100px 100px / 120px;
-    background-color: yellow;
+    margin: 60px 0px 50px 0px; 
+    border-radius: 10px; 
+    cursor: pointer;
+    background-color: #007BFF;
+    color: #fff;
     cursor: pointer;
     font-family: 'cooper black';
     box-sizing: border-box;
-    width: 900px;
+    width: 900px; 
+}
+
+.overlay-content button:hover {
+    background-color: darkgoldenrod;
+}
+
+.movies-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 20px; 
+    padding: 20px; 
+    width: 100%; 
+}
+
+.overlaymovie {
+    background-color: #333; 
+    padding: 10px;
+    margin: 10px 0; 
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    width: 100%; 
+}
+
+.overlaymovie img {
+    width: 100%; 
+    height: auto; 
+    border-radius: 5px;
+}
+
+.overlaymovie h4, .overlaymovie h5 {
+    color: #fff; 
+    text-align: center; 
 }
 
 .hidden {

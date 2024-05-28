@@ -1,29 +1,58 @@
-.whatmovies__test {
-  text-align: center;
+.movies__grid h4, .movies__grid h5 {
+  color: #fff; 
+  text-align: center; 
+}
+
+.movies__container {
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
 }
 
-.random-movies-container {
+.movies__grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* Adjust the number of columns as needed */
-  gap: 20px; /* Adjust the gap between images */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+  gap: 20px;
+  width: 100%; 
+  align-items: start; 
 }
 
-.random-movie {
-  text-align: center;
-  border: 1px solid #ddd; /* Add a border to each movie element */
+.movie__card {
+  background: #333;
+  color: white;
   padding: 10px;
-  max-width: 400px; /* Adjust the maximum width of each movie element */
-  margin-left: 40px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease;
 }
 
-.random-movie img {
-  max-width: 100%; /* Ensure all images have the same width */
-  height: 500px;
+.movie__card:hover {
+  transform: scale(1.05); 
 }
 
-.random-movie p {
-  margin: 0;
-  padding: 5px;
-  font-size: 24px; /* Adjust the font size for movie details */
+.movie__card img {
+  width: 100%; 
+  border-radius: 8px; 
+  margin-bottom: 10px; 
+}
+
+.loadmore {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  width: 200px; 
+  text-align: center; 
+}
+
+.loadmore:hover {
+  background-color: darkgoldenrod;
 }

@@ -38,6 +38,19 @@
     margin-right: 0; 
 }
 
+.Movie__Discover-movies button,
+.Movie__Discover-tvshows button {
+    padding: 20px;
+    margin-left: 0px ;
+    margin-top: 170px;
+    border-radius: 100px 100px / 120px;
+    background-color: yellow;
+    cursor: pointer;
+    font-family: 'cooper black';
+    box-sizing: border-box;
+    width: 900px;
+}
+
 .Movie__Discover-movies:hover,
 .Movie__Discover-tvshows:hover {
     opacity: 1;
